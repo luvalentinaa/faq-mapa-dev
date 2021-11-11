@@ -1,0 +1,140 @@
+/*FONTES
+família de fontes: 'Abril Fatface', cursiva;
+família de fontes: 'Lagosta', cursiva;
+família da fonte: 'Roboto', sans-serif;
+família de fontes: 'Special Elite', cursiva;
+*/
+body,
+main,
+section,
+div,
+img,
+h1,
+li,
+ul,
+a,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+html {
+  background: linear-gradient(#020202, #6565e7, #f47657, #e60a70);
+  min-height: 100%;
+}
+body {
+  font-family: 'Abril Fatface', cursiva, sans-serif;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.conteudo-principal {
+  width: 65%;
+  min-height: 450px;
+  background-color: #fff;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+}
+.conteudo-principal .imagem {
+  position: relative;
+  left: -120px;
+  width: 50%;
+  margin: 50px 0;
+}
+.conteudo-faq {
+  width: 40%;
+  padding-bottom: 20px;
+}
+h2 {
+  font-family: 'Special Elite', cursiva;
+  font-weight: 100;
+}
+
+.conteudo-principal .conteudo-faq .titulo {
+  color: rgb(255, 72, 0);
+  font-size: 32px;
+  font-family: 'Lagosta', cursiva;
+  margin-bottom: 30px;
+}
+.conteudo-principal .conteudo-faq .items .item {
+  cursor: pointer;
+  background-image: url(../img/seta_baixo.svg);
+  background-repeat: no-repeat;
+  background-position: top 8px right 0;
+  background-size: 40px;
+  border-bottom: 1px solid rgb(230, 6, 73);
+  margin: 10px 0;
+}
+.conteudo-principal .conteudo-faq .items .item:last-child {
+  border-bottom: none;
+}
+.item .pergunta {
+  padding-bottom: 15px;
+  font-size: 18px;
+  width: 90%;
+  transition: 0.2s ease-in-out;
+}
+.item .pergunta:hover {
+  color: #f47657;
+}
+.item .resposta {
+  display: none;
+  padding-bottom: 15px;
+}
+
+/*ESTILOS DO ITEM ATIVO*/
+.conteudo-principal .conteudo-faq .items .item.ativa h2 {
+  font-weight: 700;
+}
+.conteudo-principal .conteudo-faq .items .item.ativa .resposta {
+  display: block;
+}
+.conteudo-principal .conteudo-faq .items .item.ativa {
+  background-image: url(../img/seta_cima.svg);
+  background-repeat: no-repeat;
+  background-position: top 8px right 0;
+  background-size: 40px;
+  border-bottom: 1px solid rgb(230, 6, 73);
+  margin: 10px 0;
+}
+/*--------Respônsivo---------*/
+@media (max-width: 840px) {
+  .conteudo-principal {
+    flex-direction: column;
+    width: 90%;
+  }
+  .conteudo-principal .conteudo-faq {
+    width: 100%;
+  }
+  .conteudo-principal .conteudo-faq {
+    font-size: 24px;
+    text-align: center;
+  }
+  .conteudo-principal .conteudo-faq {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .conteudo-principal .items .pergunta {
+    font-size: 16px;
+  }
+  .conteudo-principal .imagem {
+    width: 40%;
+    left: 0;
+    margin: 30px 0;
+  }
+  p {
+    font-size: 50%;
+  }
+}
+@media (max-width: 425px) {
+  .conteudo-principal {
+    height: 540px;
+  }
+}
